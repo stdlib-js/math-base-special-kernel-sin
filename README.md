@@ -52,7 +52,7 @@ var kernelSin = require( '@stdlib/math-base-special-kernel-sin' );
 
 #### kernelSin( x, y )
 
-Computes the [sine][sine] of a `number` on `[-π/4, π/4]`. For increased accuracy, the number for which the [sine][sine] should be evaluated can be supplied as a [double-double number][double-double-arithmetic] (i.e., a non-evaluated sum of two [double-precision floating-point numbers][ieee754] `x` and `y`).
+Computes the [sine][sine] of a number on `[-π/4, π/4]`.
 
 ```javascript
 var v = kernelSin( 0.0, 0.0 );
@@ -81,6 +81,8 @@ v = kernelSin( NaN, NaN );
 <section class="notes">
 
 ## Notes
+
+-   For increased accuracy, the number for which the [sine][sine] should be evaluated can be supplied as a [double-double number][double-double-arithmetic] (i.e., a non-evaluated sum of two [double-precision floating-point numbers][ieee754] `x` and `y`).
 
 -   As components of a [double-double number][double-double-arithmetic], the two [double-precision floating-point numbers][ieee754] `x` and `y` must satisfy 
 
@@ -114,7 +116,7 @@ var x = linspace( -PI/4.0, PI/4.0, 100 );
 
 var i;
 for ( i = 0; i < x.length; i++ ) {
-    console.log( 'kernelSin(%d) = %d', x[ i ], kernelSin( x[ i ], 0.0 ) );
+    console.log( 'sine(%d) = %d', x[ i ], kernelSin( x[ i ], 0.0 ) );
 }
 ```
 
@@ -150,7 +152,7 @@ for ( i = 0; i < x.length; i++ ) {
 
 #### stdlib_base_kernel_sin( x, y )
 
-Computes the [sine][sine] of a `number` on `[-π/4, π/4]`. For increased accuracy, the number for which the [sine][sine] should be evaluated can be supplied as a [double-double number][double-double-arithmetic] (i.e., a non-evaluated sum of two [double-precision floating-point numbers][ieee754] `x` and `y`).
+Computes the [sine][sine] of a number on `[-π/4, π/4]`.
 
 ```c
 double out = stdlib_base_kernel_sin( 0.0, 0.0 );
@@ -177,6 +179,10 @@ double stdlib_base_kernel_sin( const double x, const double y );
 
 <section class="notes">
 
+### Notes
+
+-   For increased accuracy, the number for which the [sine][sine] should be evaluated can be supplied as a [double-double number][double-double-arithmetic] (i.e., a non-evaluated sum of two [double-precision floating-point numbers][ieee754] `x` and `y`).
+
 </section>
 
 <!-- /.notes -->
@@ -197,10 +203,9 @@ int main() {
    
     double out;
     int i;
-
     for ( i = 0; i < 10; i++ ) {
         out = stdlib_base_kernel_sin( x[ i ], 0.0 );
-        printf ( "x[ i ]: %lf, y: %lf, out: %lf\n", x[ i ], 0.0, out );
+        printf ( "x: %lf, y: %lf, out: %lf\n", x[ i ], 0.0, out );
     }
 }
 ```
