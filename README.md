@@ -31,7 +31,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import kernelSin from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-kernel-sin@deno/mod.js';
+import kernelSin from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-kernel-sin@v0.0.7-deno/mod.js';
 ```
 
 #### kernelSin( x, y )
@@ -94,7 +94,7 @@ v = kernelSin( NaN, NaN );
 ```javascript
 import linspace from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-linspace@deno/mod.js';
 import PI from 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-pi@deno/mod.js';
-import kernelSin from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-kernel-sin@deno/mod.js';
+import kernelSin from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-kernel-sin@v0.0.7-deno/mod.js';
 
 var x = linspace( -PI/4.0, PI/4.0, 100 );
 
