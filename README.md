@@ -31,6 +31,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import kernelSin from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-kernel-sin@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-special-kernel-sin/tags). For example,
+
+```javascript
 import kernelSin from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-kernel-sin@v0.0.7-deno/mod.js';
 ```
 
@@ -94,7 +99,7 @@ v = kernelSin( NaN, NaN );
 ```javascript
 import linspace from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-linspace@deno/mod.js';
 import PI from 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-pi@deno/mod.js';
-import kernelSin from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-kernel-sin@v0.0.7-deno/mod.js';
+import kernelSin from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-kernel-sin@deno/mod.js';
 
 var x = linspace( -PI/4.0, PI/4.0, 100 );
 
