@@ -24,30 +24,38 @@ limitations under the License.
 
 > Compute the [sine][sine] of a double-precision floating-point number on `[-π/4, π/4]`.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/math-base-special-kernel-sin
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var kernelSin = require( '@stdlib/math-base-special-kernel-sin' );
+kernelSin = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-kernel-sin@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var kernelSin = require( 'path/to/vendor/umd/math-base-special-kernel-sin/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-kernel-sin@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.kernelSin;
+})();
+</script>
 ```
 
 #### kernelSin( x, y )
@@ -107,10 +115,15 @@ v = kernelSin( NaN, NaN );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var linspace = require( '@stdlib/array-base-linspace' );
-var PI = require( '@stdlib/constants-float64-pi' );
-var kernelSin = require( '@stdlib/math-base-special-kernel-sin' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-linspace@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-pi@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-kernel-sin@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 var x = linspace( -PI/4.0, PI/4.0, 100 );
 
@@ -118,6 +131,11 @@ var i;
 for ( i = 0; i < x.length; i++ ) {
     console.log( 'sine(%d) = %d', x[ i ], kernelSin( x[ i ], 0.0 ) );
 }
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -126,97 +144,7 @@ for ( i = 0; i < x.length; i++ ) {
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/math/base/special/kernel_sin.h"
-```
-
-#### stdlib_base_kernel_sin( x, y )
-
-Computes the [sine][sine] of a double-precision floating-point number on `[-π/4, π/4]`.
-
-```c
-double out = stdlib_base_kernel_sin( 0.0, 0.0 );
-// returns ~0.0
-
-out = stdlib_base_kernel_sin( 0.619, 9.279e-18 );
-// returns ~0.58
-```
-
-The function accepts the following arguments:
-
--   **x**: `[in] double` input value (in radians, assumed to be bounded by `~pi/4` in magnitude).
--   **y**: `[in] double` tail of `x`.
-
-```c
-double stdlib_base_kernel_sin( const double x, const double y );
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-### Notes
-
--   For increased accuracy, the number for which the [sine][sine] should be evaluated can be supplied as a [double-double number][double-double-arithmetic] (i.e., a non-evaluated sum of two [double-precision floating-point numbers][ieee754] `x` and `y`).
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/math/base/special/kernel_sin.h"
-#include <stdlib.h>
-#include <stdio.h>
-
-int main() {
-    double x[] = { -0.7853981633974483, -0.6108652381980153, -0.4363323129985824, -0.26179938779914946, -0.08726646259971649, 0.08726646259971649, 0.26179938779914935, 0.43633231299858233, 0.6108652381980153, 0.7853981633974483 };
-   
-    double out;
-    int i;
-    for ( i = 0; i < 10; i++ ) {
-        out = stdlib_base_kernel_sin( x[ i ], 0.0 );
-        printf ( "x: %lf, y: %lf, out: %lf\n", x[ i ], 0.0, out );
-    }
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -306,11 +234,11 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/kernel-cos]: https://github.com/stdlib-js/math-base-special-kernel-cos
+[@stdlib/math/base/special/kernel-cos]: https://github.com/stdlib-js/math-base-special-kernel-cos/tree/umd
 
-[@stdlib/math/base/special/kernel-tan]: https://github.com/stdlib-js/math-base-special-kernel-tan
+[@stdlib/math/base/special/kernel-tan]: https://github.com/stdlib-js/math-base-special-kernel-tan/tree/umd
 
-[@stdlib/math/base/special/sin]: https://github.com/stdlib-js/math-base-special-sin
+[@stdlib/math/base/special/sin]: https://github.com/stdlib-js/math-base-special-sin/tree/umd
 
 <!-- </related-links> -->
 
