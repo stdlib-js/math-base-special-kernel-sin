@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import kernelSin from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-kernel-sin@esm/index.mjs';
+import kernelSin from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-kernel-sin@v0.2.4-esm/index.mjs';
 ```
 
 #### kernelSin( x, y )
@@ -111,7 +111,7 @@ v = kernelSin( NaN, NaN );
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@esm/index.mjs';
 import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@esm/index.mjs';
 import PI from 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-pi@esm/index.mjs';
-import kernelSin from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-kernel-sin@esm/index.mjs';
+import kernelSin from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-kernel-sin@v0.2.4-esm/index.mjs';
 
 var opts = {
     'dtype': 'float64'
