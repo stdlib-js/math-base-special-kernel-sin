@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-10-09)
+## Unreleased (2026-10-12)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`8c05bc6`](https://github.com/stdlib-js/stdlib/commit/8c05bc6d4db92616375d80463af6950eb5bddb9f) - **bench:** clean-up [(#15934)](https://github.com/stdlib-js/stdlib/pull/15934) _(by Philipp Burckhardt, Athan Reines)_
 -   [`e67a5aa`](https://github.com/stdlib-js/stdlib/commit/e67a5aad659d8f6623e4ab8ac94687a8586ea83a) - **docs:** update Markdown equation elements _(by stdlib-bot)_
 -   [`d5da0cb`](https://github.com/stdlib-js/stdlib/commit/d5da0cbb9558361e16b90a5351c04bf4cdc917f7) - **docs:** add introductory text to READMEs [(#14697)](https://github.com/stdlib-js/stdlib/pull/14697) _(by Karan Anand)_
 -   [`84de099`](https://github.com/stdlib-js/stdlib/commit/84de099e2699d070bb21beb1b97235580fbd4f74) - **test:** migrate `math/base/special/kernel-sin` to ULP-based testing [(#12797)](https://github.com/stdlib-js/stdlib/pull/12797) _(by Philipp Burckhardt)_
@@ -27,8 +28,9 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
+-   Athan Reines
 -   Karan Anand
 -   Philipp Burckhardt
 
